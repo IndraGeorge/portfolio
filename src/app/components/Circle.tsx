@@ -1,6 +1,6 @@
 type IProps = {
   width: string;
-  height: string;
+  height?: string;
   top?: string;
   left?: string;
   right?: string;
@@ -17,7 +17,7 @@ export default function Circle({
 }: IProps) {
   return (
     <div
-      className={`circle rounded-full absolute overflow-hidden ${top} ${left} ${right} ${width} ${bottom} ${height}`}
+      className={`circle absolute md:translate-y-18 translate-y-4 scale-105 opacity-80 ${top} ${left} ${right} ${width} ${bottom} ${height}`}
     ></div>
   );
 }

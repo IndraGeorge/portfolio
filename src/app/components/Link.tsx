@@ -8,9 +8,13 @@ type IProps = {
 
 export default function Link({ href, children, img }: IProps) {
   return (
-    <div className="flex gap-4 items-center duration-200 hover:underline">
-      <Image className="w-8" src={img} alt="flèche" />
-      <a href={href}>{children}</a>
-    </div>
+    <nav className="flex gap-4 items-center duration-200 hover:underline">
+      <Image className="w-7" src={img} alt="flèche" />
+      <ul>
+        <li>
+          <a href={href}>{children}</a>
+        </li>
+      </ul>
+    </nav>
   );
 }
