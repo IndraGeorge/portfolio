@@ -5,10 +5,13 @@ import github from "../assets/github.svg";
 
 export default function Footer() {
   return (
-    <div className="flex justify-center items-center absolute bottom-0 mb-6">
-      <Image className="w-9" src={mail} alt="mail" />
-      <Image className="w-9" src={linkedin} alt="linkedin" />
-      <Image className="w-9" src={github} alt="github" />
-    </div>
+    <footer className="flex justify-center flex-col items-center mb-2">
+      <div className="flex">
+        <Image className="w-9" src={mail} alt="mail" />
+        <Image className="w-9" src={linkedin} alt="linkedin" />
+        <Image className="w-9" src={github} alt="github" />
+      </div>
+      <p className="text-xs">© 2023 Indra George, tous droits réservés</p>
+    </footer>
   );
 }

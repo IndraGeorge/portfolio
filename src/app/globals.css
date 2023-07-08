@@ -7,7 +7,7 @@
 *{
     box-sizing: border-box;
     padding:0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body{
@@ -25,6 +25,7 @@ h3{
 h2{
     font-weight:bold;
     font-size:30px;
+    width:100%;
 }
 
 a{
@@ -51,17 +52,33 @@ button{
     display:block;
 }
 
+.projects{
+    display:none;
+    background-color: #423A3A;
+}
+
+hr{
+    color:#000;
+    border-top: 2px solid #606887;
+    margin-top: 12px;
+    width:100%;
+}
+
+.items-project{
+    padding: 1.5rem 0;
+}
+
 @media only screen and (min-width:768px) {
     h3{
         font-size:36px;
     }
 
     h2{
-        font-size:40px;
+        font-size:38px;
     }
 
     h4{
-        font-size:28px;
+        font-size:20px;
     }
 
     a{
@@ -70,5 +87,10 @@ button{
 
     button{
         font-size:18px;
+    }
+
+    .projects{
+        display:flex;
+        background-color: #423A3A;
     }
 }

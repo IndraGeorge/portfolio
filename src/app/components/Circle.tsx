@@ -17,7 +17,7 @@ export default function Circle({
 }: IProps) {
   return (
     <div
-      className={`circle absolute md:translate-y-18 translate-y-4 scale-105 opacity-80 ${top} ${left} ${right} ${width} ${bottom} ${height}`}
+      className={`circle absolute md:translate-y-18 translate-y-4 scale-105 opacity-80 animate-[wiggle_1s_ease-in-out_infinite] ${top} ${left} ${right} ${width} ${bottom} ${height}`}
     ></div>
   );
 }

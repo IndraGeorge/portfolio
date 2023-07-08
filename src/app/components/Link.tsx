@@ -2,7 +2,7 @@ import Image from "next/image";
 
 type IProps = {
   href: string;
-  img: string;
+  img: any;
   children: React.ReactNode;
 };
 
