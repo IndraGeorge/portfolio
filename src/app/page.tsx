@@ -11,9 +11,11 @@ export default function Home() {
     <main className="relative overflow-hidden">
       <Circle top={"top-0"} left={"left-40"} width={"w-1/12"} />
       <div className="px-2.5 h-screen flex flex-col justify-center items-center text-center relative z-10">
-        <h3>Hello!</h3>
-        <h3>Je suis Indra George, développeuse JavaScript React.</h3>
-        <p className=" mt-3 text-xl md:text-2xl font-medium">
+        <h3 className="home">Hello!</h3>
+        <h3 className="home">
+          Je suis Indra George, développeuse JavaScript React.
+        </h3>
+        <p className="home mt-3 text-xl md:text-2xl font-medium">
           J’aime créer des applications solides et évolutifs avec d’excellentes
           expériences utilisatrices
         </p>
