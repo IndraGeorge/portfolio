@@ -23,7 +23,7 @@ export default function competences() {
         </Link>
       </div>
       <h2 className="text-center mt-5">Compétences</h2>
-      <div className="flex justify-center mt-8 min-h-[430px]">
+      <div className="flex justify-center mt-8 min-h-[380px]">
         <div className="flex justify-center flex-wrap items-center gap-10">
           <Techno img={javascript} alt="logo Javacript">
             JavaScript
