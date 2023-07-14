@@ -2,7 +2,7 @@ import "./globals.css";
 import "./animation.css";
 
 export const metadata = {
-  title: "Indra",
+  title: "Indra George - Portfolio développeuse web",
   description: "Portfolio Indra George",
 };
 

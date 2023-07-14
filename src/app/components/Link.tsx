@@ -13,7 +13,9 @@ export default function Nav({ href, children, img }: IProps) {
       <Image className="w-6" src={img} alt="flèche" />
       <ul>
         <li>
-          <Link href={href}>{children}</Link>
+          <Link href={href} rel="noreferrer">
+            {children}
+          </Link>
         </li>
       </ul>
     </nav>
