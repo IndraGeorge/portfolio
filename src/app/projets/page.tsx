@@ -1,7 +1,4 @@
 "use client";
-import ArrowLeft from "../assets/ArrowLeft.svg";
-import ArrowRight from "../assets/ArrowRight.svg";
-import Link from "../components/Link";
 import Image, { StaticImageData } from "next/image";
 import imgpodologue from "../assets/imgpodologue.png";
 import master from "../assets/master.png";
@@ -9,8 +6,9 @@ import todoapp from "../assets/to-do-app.png";
 import kasa from "../assets/kasa.svg";
 import kanap from "../assets/kanap.png";
 import Footer from "../components/Footer";
-import Project from "../components/project";
+import Project from "../components/Project";
 import { useState } from "react";
+import Menu from "../components/Menu";
 
 type Images = {
   [key: number]: {
@@ -55,29 +53,22 @@ export default function Projects() {
   };
 
   return (
-    <main className="p-10 h-screen">
-      <div className="flex justify-between">
-        <Link href="/competences" img={ArrowLeft}>
-          Compétences
-        </Link>
-        <Link href="/contacts" img={ArrowRight}>
-          Contact
-        </Link>
-      </div>
-      <div className="flex items-center justify-between mt-8 min-h-[450px]">
+    <main className="px-10 pt-10 flex flex-col">
+      <Menu />
+      <div className="flex items-center justify-between flex-grow mb-3">
         <div className="projects flex justify-center w-2/4">
           {imageSources.map((src, index) =>
             hovered && index === indexImage ? (
               <Image
                 key={index}
-                className="p2 w-80 min-h-[450px] object-contain anim-opacity"
+                className="p2 w-80 object-contain anim-opacity"
                 src={src}
                 alt="site podologue"
               />
             ) : null
           )}
         </div>
-        <div className="bloc-anim flex flex-col m-5 w-full md:w-2/4 h-full">
+        <div className="bloc-anim flex flex-col m-5 w-full md:w-2/4">
           <h2>Projets</h2>
           <hr />
           <ul>
@@ -119,9 +110,7 @@ export default function Projects() {
           </ul>
         </div>
       </div>
-      <div className="relative bottom-[-50px]">
-        <Footer />
-      </div>
+      <Footer />
     </main>
   );
 }

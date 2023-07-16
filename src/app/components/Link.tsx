@@ -1,23 +1,19 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 type IProps = {
   href: string;
-  img: any;
+  img: StaticImageData;
   children: React.ReactNode;
 };
 
 export default function Nav({ href, children, img }: IProps) {
   return (
-    <nav className="flex gap-4 items-center duration-200 hover:underline">
+    <div className="flex gap-4 items-center">
       <Image className="w-6" src={img} alt="flèche" />
-      <ul>
-        <li>
-          <Link href={href} rel="noreferrer">
-            {children}
-          </Link>
-        </li>
-      </ul>
-    </nav>
+      <Link className="link-border" href={href} rel="noreferrer">
+        {children}
+      </Link>
+    </div>
   );
 }

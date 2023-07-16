@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative overflow-y-hidden">
       <Circle top={"top-0"} left={"left-40"} width={"w-1/12"} />
       <div className="px-2.5 h-screen flex flex-col justify-center items-center text-center relative z-10">
         <h3 className="anim-opacity">Hello!</h3>
@@ -27,18 +27,18 @@ export default function Home() {
             Projets
           </Link>
         </div>
-        <Button href={"./contacts"}>Contacts</Button>
+        <Button href={"./contact"}>Contacts</Button>
         <div className="absolute bottom-0">
           <Footer />
         </div>
       </div>
-      <Circle left={"left-[-7%]"} bottom={"bottom-0"} width={"w-3/12"} />
+      <Circle left={"left-[-8%]"} bottom={"bottom-0"} width={"w-3/12"} />
       <Image
         className="absolute bottom-0 w-4/12  opacity-90 "
         src={laptup}
         alt="ordinateur"
       />
-      <Circle right={"right-[-4%]"} bottom={"bottom-0"} width={"w-2/12"} />
+      <Circle right={"right-[-5%]"} bottom={"bottom-0"} width={"w-2/12"} />
     </main>
   );
 }

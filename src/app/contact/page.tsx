@@ -1,8 +1,9 @@
 "use client";
-import { useForm } from "react-hook-form";
-import ArrowLeft from "../assets/ArrowLeft.svg";
-import Link from "../components/Link";
+import { useForm, SubmitHandler } from "react-hook-form";
 import Footer from "../components/Footer";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import Menu from "../components/Menu";
 
 interface UserInput {
   name: string;
@@ -10,37 +11,70 @@ interface UserInput {
   message: string;
 }
 
-export default function Contacts() {
+export default function Contact() {
+  const key: string | undefined = process.env.NEXT_PUBLIC_KEY;
+
   const {
     register,
     handleSubmit,
-    setError,
+    formState,
+    reset,
     formState: { errors },
   } = useForm<UserInput>();
 
-  const sendEmail = (values: UserInput) => {
-    console.log(`Submitted`);
-    console.table(values);
+  (function () {
+    emailjs.init(key || "");
+  })();
+
+  const sendEmail: SubmitHandler<UserInput> = (values: UserInput) => {
+    const templateId = "template_zx1hxbg";
+    const serviceId = "service_v173e04";
+    sendFeedBack(serviceId, templateId, {
+      name: values.name,
+      email: values.email,
+      message: values.message,
+    });
+    if (formState.isSubmitSuccessful) {
+      reset();
+    }
   };
 
+  const sendFeedBack = (
+    serviceId: string,
+    templateId: string,
+    variables: any
+  ) => {
+    emailjs
+      .send(serviceId, templateId, variables, key)
+      .then((res) => {
+        console.log("SUCCESS!", res.status, res.text);
+        setColorSuccess(true);
+        setSuccess("Message envoyé!");
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+        setSuccess("Une erreur est survenue!");
+        setColorSuccess(false);
+      });
+  };
+
+  const [colorSuccess, setColorSuccess] = useState(false);
+  const [success, setSuccess] = useState("");
+
   return (
-    <main className="p-10 h-screen">
-      <div className="flex">
-        <Link href="/projets" img={ArrowLeft}>
-          Projets
-        </Link>
-      </div>
-      <div className="max-w-xl m-auto p-4 rounded-lg">
+    <main className="px-10 pt-10">
+      <Menu />
+      <div className="max-w-xl mx-auto mb-5 p-4 rounded-lg pb-0">
         <form
           onSubmit={handleSubmit(sendEmail)}
           role="form"
           id="contact-form"
           method="post"
         >
-          <div className="-mx-2 md:items-center">
+          <div className="-mx-2 mt-8">
             <div className="px-2">
               <label
-                className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                className="block mb-2 text-sm text-gray-600"
                 htmlFor="name"
               >
                 Nom et Prénom
@@ -63,10 +97,7 @@ export default function Contacts() {
             </div>
           </div>
           <div className="mt-4">
-            <label
-              className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
-              htmlFor="email"
-            >
+            <label className="block mb-2 text-sm text-gray-600" htmlFor="email">
               Email
             </label>
             <input
@@ -86,7 +117,7 @@ export default function Contacts() {
 
           <div className="w-full mt-4">
             <label
-              className="block ckmb-2 text-sm text-gray-600 dark:text-gray-200"
+              className="block ckmb-2 text-sm text-gray-600"
               htmlFor="message"
             >
               Message
@@ -95,7 +126,7 @@ export default function Contacts() {
               id="message"
               required
               {...register("message")}
-              className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-52 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+              className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-44 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
               placeholder="Message"
             ></textarea>
             <span className="text-red-600">
@@ -107,12 +138,17 @@ export default function Contacts() {
             <button className="rounded-full text-white uppercase p-3 w-36 mt-5 duration-200 hover:bg-fuchsia-800">
               Envoyer
             </button>
+            <p
+              className={`mt-3 ${
+                colorSuccess ? "text-green-600" : "text-red-600"
+              }`}
+            >
+              {success}
+            </p>
           </div>
         </form>
       </div>
-      <div className="relative bottom-[-50px]">
-        <Footer />
-      </div>
+      <Footer />
     </main>
   );
 }
