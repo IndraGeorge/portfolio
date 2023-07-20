@@ -27,9 +27,11 @@ export default function Project({
           "flex bloc-anim items-project relative flex items-center border-b-[2px] border-[#606887]"
         }
       >
-        <Image className="arrow-project" src={arrowLink} alt="flèche" />
+        <>
+          <Image className="arrow-project" src={arrowLink} alt="flèche" />
 
-        <p className="link-project">{children}</p>
+          <p className="link-project">{children}</p>
+        </>
       </Link>
     </li>
   );

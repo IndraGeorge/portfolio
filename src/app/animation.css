@@ -1,48 +1,48 @@
-.arrow-project{
-   transform: translateX(-100%);
-   width:0;
-   transition: 200ms ease-in;
+.arrow-project {
+  transform: translateX(-100%);
+  width: 0;
+  transition: 200ms ease-in;
 }
 
-.items-project{
-    gap:0;
+.items-project {
+  gap: 0;
 }
 
-.items-project:hover{
-    gap:15px;
+.items-project:hover {
+  gap: 15px;
 }
 
-.items-project:hover .arrow-project{
-    transform: translateX(0);
-    width:1.5rem;
+.items-project:hover .arrow-project {
+  transform: translateX(0);
+  width: 1.5rem;
 }
 
-.anim-opacity{
-    animation: home-anim 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.anim-opacity {
+  animation: home-anim 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.bloc-anim{
-    animation:anim-translate 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.bloc-anim {
+  animation: anim-translate 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes anim-translate {
-    0%{
-        transform: translateY(-100px);
-    }
+  0% {
+    transform: translateY(-100px);
+  }
 
-    100%{
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes home-anim {
-    0%{
-        transform: translateZ(-100%);
-        opacity: 0;
-    }
+  0% {
+    transform: translateZ(-100%);
+    opacity: 0;
+  }
 
-    100%{
-        transform: translateZ(0);
-        opacity: 1
-    }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
 }

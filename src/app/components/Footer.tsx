@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center mb-2">
+    <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center mb-2">
       <div className="flex">
         <Link
           href="mailto:george.indraa@gmail.com"
@@ -31,6 +31,6 @@ export default function Footer() {
         </Link>
       </div>
       <p className="text-xs">© 2023 Indra George, tous droits réservés</p>
-    </footer>
+    </div>
   );
 }

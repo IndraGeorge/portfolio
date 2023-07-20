@@ -1,10 +1,11 @@
 "use client";
-
 import Link from "next/link";
 import { useState } from "react";
 import rod from "../assets/rod.svg";
 import close from "../assets/cross.svg";
 import Image from "next/image";
+import Circle from "../components/Circle";
+import Footer from "../components/Footer";
 
 const Menu = () => {
   const [nav, setNav] = useState(false);
@@ -31,7 +32,7 @@ const Menu = () => {
         />
       )}
       <nav
-        className={`h-full bg-[#f0f1ff] fixed top-[0px] left-[0px] flex flex-col justify-center w-full z-[2] duration-400 ${
+        className={`overflow-hidden h-full bg-[#f0f1ff] fixed top-[0px] left-[0px] flex flex-col justify-center w-full z-[2] duration-400 ${
           nav ? "translate-y-[0]" : "translate-y-[-100%]"
         }`}
       >
@@ -41,26 +42,22 @@ const Menu = () => {
           } duration-700`}
         >
           <li>
-            <Link
-              className="link-border italic text-3xl md:text-4xl xl:text-5xl"
-              href="/"
-              rel="noreferrer"
-            >
+            <Link className="link-border nav-link" href="/" rel="noreferrer">
               Accueil
             </Link>
           </li>
           <li>
             <Link
-              className="link-border italic text-3xl md:text-4xl xl:text-5xl"
-              href="/competences"
+              className="link-border nav-link"
+              href="/a-propos"
               rel="noreferrer"
             >
-              Compétences
+              À propos
             </Link>
           </li>
           <li>
             <Link
-              className="link-border italic text-3xl md:text-4xl xl:text-5xl"
+              className="link-border nav-link"
               href="/projets"
               rel="noreferrer"
             >
@@ -69,7 +66,7 @@ const Menu = () => {
           </li>
           <li>
             <Link
-              className="link-border italic text-3xl md:text-4xl xl:text-5xl"
+              className="link-border nav-link"
               href="/contact"
               rel="noreferrer"
             >
@@ -77,6 +74,10 @@ const Menu = () => {
             </Link>
           </li>
         </ul>
+        <Circle left={"left-[-5%]"} bottom={"bottom-0"} width={"w-2/12"} />
+        <Circle right={"right-[-5%]"} bottom={"bottom-0"} width={"w-2/12"} />
+
+        <Footer />
       </nav>
     </>
   );
