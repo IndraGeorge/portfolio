@@ -1,37 +1,24 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import arrowLink from "../assets/arrowLink.svg";
 
 type IProps = {
   href: string;
-  onMouseOver?: () => void;
-  onMouseOut?: () => void;
+  src: StaticImageData;
+  alt: string;
   children: React.ReactNode;
 };
 
-export default function Project({
-  children,
-  href,
-  onMouseOver,
-  onMouseOut,
-}: IProps) {
+export default function Project({ href, src, alt, children }: IProps) {
   return (
-    <li>
+    <li className="p-[1.2rem] bloc relative w-1/2">
       <Link
         href={href}
         target="_blanck"
         rel="noreferrer"
-        onMouseOver={onMouseOver}
-        onMouseOut={onMouseOut}
-        className={
-          "flex bloc-anim items-project relative flex items-center border-b-[2px] border-[#606887]"
-        }
+        className={"flex relative flex-col items-center block"}
       >
-        <>
-          <Image className="arrow-project" src={arrowLink} alt="flèche" />
-
-          <p className="link-project">{children}</p>
-        </>
+        <Image className="h-auto" src={src} alt={alt} />
+        {children}
       </Link>
     </li>
   );

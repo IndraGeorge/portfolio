@@ -1,10 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import rod from "../assets/rod.svg";
-import close from "../assets/cross.svg";
-import Image from "next/image";
-import Circle from "../components/Circle";
 import Footer from "../components/Footer";
 
 const Menu = () => {
@@ -15,32 +11,18 @@ const Menu = () => {
   };
 
   return (
-    <>
-      {nav ? (
-        <Image
-          onClick={showNav}
-          className="md:w-16 w-12 cursor-pointer fixed z-[5]"
-          src={close}
-          alt="croix"
-        />
-      ) : (
-        <Image
-          onClick={showNav}
-          className="md:w-16 w-12 cursor-pointer"
-          src={rod}
-          alt="barre menu"
-        />
-      )}
+    <header className="flex justify-between h-[70px]">
+      <div onClick={showNav} className="fixed cursor-pointer z-[3]">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
       <nav
-        className={`overflow-hidden h-full bg-[#f0f1ff] fixed top-[0px] left-[0px] flex flex-col justify-center w-full z-[2] duration-400 ${
-          nav ? "translate-y-[0]" : "translate-y-[-100%]"
+        className={`menu overflow-hidden fixed top-[0px] left-[0px] flex flex-col justify-center w-full z-[2] transform${
+          nav ? "translate-y-0 h-full" : "translate-y-full h-0"
         }`}
       >
-        <ul
-          className={`m-auto md:ml-[25%] ${
-            nav ? "translate-y-[0]" : "translate-y-[-100vh] translate-z-[0]"
-          } duration-700`}
-        >
+        <ul className="m-auto md:ml-[25%] overflow-hidden">
           <li>
             <Link className="link-border nav-link" href="/" rel="noreferrer">
               Accueil
@@ -74,12 +56,9 @@ const Menu = () => {
             </Link>
           </li>
         </ul>
-        <Circle left={"left-[-5%]"} bottom={"bottom-0"} width={"w-2/12"} />
-        <Circle right={"right-[-5%]"} bottom={"bottom-0"} width={"w-2/12"} />
-
         <Footer />
       </nav>
-    </>
+    </header>
   );
 };
 

@@ -29,15 +29,15 @@ export default function Home() {
           </Link>
         </div>
         <Button href={"./contact"}>Contacts</Button>
+        <Footer />
       </div>
       <Circle left={"left-[-5%]"} bottom={"bottom-0"} width={"w-2/12"} />
       <Image
-        className="absolute bottom-0 w-3/12  opacity-90 "
+        className="absolute bottom-0 w-3/12 opacity-90"
         src={laptup}
         alt="ordinateur"
       />
       <Circle right={"right-[-5%]"} bottom={"bottom-0"} width={"w-2/12"} />
-      <Footer />
     </main>
   );
 }

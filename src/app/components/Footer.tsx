@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center mb-2">
+    <div className="flex flex-col items-center justify-center mb-2 absolute bottom-0 left-0 right-0">
       <div className="flex">
         <Link
           href="mailto:george.indraa@gmail.com"
@@ -23,7 +23,7 @@ export default function Footer() {
           <Image className="w-9" src={linkedin} alt="linkedin" />
         </Link>
         <Link
-          href="https://github.com/IndraGeorge?tab=repositories"
+          href="https://github.com/IndraGeorge"
           target="_blanck"
           rel="noreferrer"
         >
