@@ -61,10 +61,10 @@ export default function Contact() {
   const [success, setSuccess] = useState("");
 
   return (
-    <div className="pt-8 px-10">
+    <div className="mt-14 md:mx-14 mx-8">
       <Menu />
-      <main className="md:px-10">
-        <div className="max-w-xl mx-auto mb-5 p-4 rounded-lg pb-0">
+      <main>
+        <div className="bloc-anim max-w-xl mx-auto mb-5 p-4 rounded-lg pb-0">
           <form
             onSubmit={handleSubmit(sendEmail)}
             role="form"
@@ -138,7 +138,7 @@ export default function Contact() {
               </span>
             </div>
             <div className="text-center pt-3">
-              <button className="rounded-full text-white uppercase p-3 w-36 mt-5 duration-200 hover:bg-fuchsia-800">
+              <button className="rounded-full text-white uppercase p-3 w-36 mt-5 duration-200">
                 Envoyer
               </button>
               <p

@@ -10,15 +10,16 @@ type IProps = {
 
 export default function Project({ href, src, alt, children }: IProps) {
   return (
-    <li className="p-[1.2rem] bloc relative w-1/2">
+    <li className="p-[1.2rem] bloc relative md:max-w-[350px]">
       <Link
         href={href}
         target="_blanck"
         rel="noreferrer"
-        className={"flex relative flex-col items-center block"}
+        className={"project flex relative flex-col items-center block"}
       >
-        <Image className="h-auto" src={src} alt={alt} />
-        {children}
+        <Image priority={false} className="h-auto" src={src} alt={alt} />
+
+        <span className="name-project text-center">{children}</span>
       </Link>
     </li>
   );

@@ -3,12 +3,45 @@
 }
 
 .bloc-anim {
-  animation: anim-translate 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: anim-translate 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.burger {
+  width: 50px;
+  height: 42px;
+  overflow: hidden;
+}
+
+i {
+  width: 30px;
+  height: 3px;
+  background: #1f2937;
+  display: block;
+  border-radius: 5px;
+  margin: 7px;
+  transition: all 0.5s ease-in-out;
+}
+
+.burger.active i:nth-child(1) {
+  transform: rotate(135deg);
+  position: absolute;
+  top: 18px;
+}
+
+.burger.active i:nth-child(2) {
+  transform: translate(-20px);
+  opacity: 0;
+}
+
+.burger.active i:nth-child(3) {
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 18px;
 }
 
 @keyframes anim-translate {
   0% {
-    transform: translateY(100%);
+    transform: translateX(100%);
   }
 
   100% {
@@ -25,5 +58,11 @@
   100% {
     transform: translateZ(0);
     opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  i {
+    width: 35px;
   }
 }

@@ -12,7 +12,10 @@ const Menu = () => {
 
   return (
     <header className="flex justify-between h-[70px]">
-      <div onClick={showNav} className="fixed cursor-pointer z-[3]">
+      <div
+        onClick={showNav}
+        className={`${nav ? "active fixed" : ""} burger cursor-pointer z-[3]`}
+      >
         <i></i>
         <i></i>
         <i></i>

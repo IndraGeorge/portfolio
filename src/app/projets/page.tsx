@@ -3,23 +3,22 @@ import master from "../assets/master.jpg";
 import kasa from "../assets/kasa.jpg";
 import todoapp from "../assets/todoapp.jpg";
 import Project from "../components/Project";
-import { useState } from "react";
 import Menu from "../components/Menu";
 
 export default function Projects() {
   return (
-    <div className="mt-10 mx-8 relative">
+    <div className="mt-16 md:mx-16 mx-6">
       <Menu />
-      <main className="pt-8">
+      <main>
         <h2 className="text-center">Projets</h2>
-        <div className="flex flex-wrap items-center">
-          <ul className="list-projects flex flex-wrap mt-5 w-full h-full pl-3 relative">
+        <div className="bloc-anim bloc-projects flex flex-wrap items-center m-auto mt-8">
+          <ul className="list-projects flex flex-wrap justify-center w-full h-full pl-3 relative">
             <Project
               href="https://cabinetpodologievalamba.fr/"
               src={imgpodologue}
               alt="site cabinet podologue valamba"
             >
-              Cabinet Pédicure-Podologue
+              Cabinet Podologue
             </Project>
             <Project
               href="https://challengemaster.fr/"
@@ -31,7 +30,7 @@ export default function Projects() {
             <Project
               href="https://indrageorge.github.io/Kasa/"
               src={kasa}
-              alt="site location appartemenr"
+              alt="site location appartement"
             >
               Kasa
             </Project>

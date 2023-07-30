@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="mt-10 mx-8">
+    <div className="mt-14 md:mx-14 mx-8">
       <Menu />
-      <main className="mt-3 md:ml-8">
-        <div className="flex min-[900px]:flex-row justify-between min-[900px]:items-center flex-col">
-          <div className="mt-8 pr-0 md:mr-8 w-full min-[900px]:w-1/2 pl-5">
-            <h2 className="mb-8">À propos</h2>
-            <p className="text-base md:text-lg">
+      <main>
+        <div className="bloc-anim mt-3 mb-6 md:ml-28">
+          <div>
+            <h2 className="mb-6">À propos</h2>
+            <p className="text-base md:text-lg md:max-w-[75%]">
               Bienvenue dans mon univers !
               <br />
               Je suis passionnée par l&apos;art de créer des{" "}
@@ -28,26 +28,19 @@ export default function About() {
               Plongez dans mes réalisations pour découvrir comment j&apos;allie
               ma créativité à ma maîtrise des technologies pour offrir des
               expériences uniques. <br />
-              <b>Soyez inspirés</b> et laissez-vous emporter par mon amour pour
-              le développement web, car chaque ligne de code que j&apos;écris
-              est un pas de plus vers <b>un futur numérique captivant</b> !
             </p>
           </div>
-          <div className="w-full mt-8 min-[900px]:ml-8 min-[900px]:w-1/2 pl-5">
-            <h4 className="mb-8">Compétences</h4>
-            <div className="flex flex-wrap mb-5">
-              <div className="skills">JavaScript </div>
-              <div className="skills">TypeScript</div>
-              <div className="skills">React JS</div>
-              <div className="skills"> Node JS</div>
-              <div className="skills">Express</div>
-              <div className="skills">CSS</div>
-              <div className="skills">HTML</div>
-              <div className="skills">Git</div>
-              <div className="skills"> GitHub</div>
-            </div>
+          <div>
+            <h4 className="mt-8">Compétences</h4>
+            <br />
+            <p className="text-base md:text-lg md:max-w-[75%]">
+              React.js / JavaScript / Node.js / Express.js / TypeScript /
+              MongoDB / Git / GitHub / Responsive design / HTML et CSS /
+              Méthodes agiles
+            </p>
+            <br />
             <Link
-              className="text-base hover:underline text-[purple]"
+              className="text-base text-[#7842c3] hover:underline"
               href="/projets"
             >
               Voir mes projets
