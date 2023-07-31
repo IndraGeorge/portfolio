@@ -18,28 +18,28 @@ export default function Projects() {
               src={imgpodologue}
               alt="site cabinet podologue valamba"
             >
-              Cabinet Podologue
+              React JS / Material UI
             </Project>
             <Project
               href="https://challengemaster.fr/"
               src={master}
               alt="site générateur de projest et de défis"
             >
-              ChallengeMaster
+              React JS / Node JS / Express / API Open AI
             </Project>
             <Project
               href="https://indrageorge.github.io/Kasa/"
               src={kasa}
               alt="site location appartement"
             >
-              Kasa
+              React JS
             </Project>
             <Project
               href="https://to-do-app-bb6ea.web.app/"
               src={todoapp}
               alt="to do list"
             >
-              Todoapp
+              React JS
             </Project>
           </ul>
         </div>

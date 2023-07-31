@@ -18,9 +18,8 @@ export default function Project({ href, src, alt, children }: IProps) {
         className={"project flex relative flex-col items-center block"}
       >
         <Image priority={false} className="h-auto" src={src} alt={alt} />
-
-        <span className="name-project text-center">{children}</span>
       </Link>
+      <span className="name-project text-center">{children}</span>
     </li>
   );
 }

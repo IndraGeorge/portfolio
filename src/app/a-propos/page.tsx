@@ -1,5 +1,7 @@
 import Menu from "../components/Menu";
 import Link from "next/link";
+import Image from "next/image";
+import arrow from "../assets/arrowLink.svg";
 
 export default function About() {
   return (
@@ -39,10 +41,12 @@ export default function About() {
               Méthodes agiles
             </p>
             <br />
+
             <Link
-              className="text-base text-[#7842c3] hover:underline"
+              className="flex gap-3 items-center text-base text-[#a616b9] hover:underline"
               href="/projets"
             >
+              <Image className="animate-bounce w-6" src={arrow} alt="flèche" />
               Voir mes projets
             </Link>
           </div>
