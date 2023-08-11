@@ -1,36 +1,39 @@
-import Image from "next/image";
-import mail from "../assets/mail.svg";
-import linkedin from "../assets/linkedin.svg";
-import github from "../assets/github.svg";
 import Link from "next/link";
+import { Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
+import { Github } from "lucide-react";
 
 export default function Footer() {
+  let date = new Date();
+
   return (
     <div className="flex flex-col items-center justify-center mb-2 absolute bottom-0 left-0 right-0">
-      <div className="flex">
+      <div className="flex gap-4 mb-2">
         <Link
           href="mailto:george.indraa@gmail.com"
           target="_blanck"
           rel="noreferrer"
         >
-          <Image className="w-9" src={mail} alt="mail" />
+          <Mail color="white" size={20}></Mail>
         </Link>
         <Link
           href="https://www.linkedin.com/in/indra-george/"
           target="_blanck"
           rel="noreferrer"
         >
-          <Image className="w-9" src={linkedin} alt="linkedin" />
+          <Linkedin color="white" size={20}></Linkedin>
         </Link>
         <Link
           href="https://github.com/IndraGeorge"
           target="_blanck"
           rel="noreferrer"
         >
-          <Image className="w-9" src={github} alt="github" />
+          <Github color="white" size={20}></Github>
         </Link>
       </div>
-      <p className="text-xs">© 2023 Indra George, tous droits réservés</p>
+      <p className="text-xs">
+        © {date.getFullYear()} Indra George, tous droits réservés
+      </p>
     </div>
   );
 }

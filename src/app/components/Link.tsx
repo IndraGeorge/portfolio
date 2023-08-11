@@ -1,19 +1,16 @@
-import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+import { MoveRight } from "lucide-react";
 
 type IProps = {
   href: string;
-  img: StaticImageData;
   children: React.ReactNode;
 };
 
-export default function Nav({ href, children, img }: IProps) {
+export default function Nav({ href, children }: IProps) {
   return (
-    <div className="flex gap-4 items-center">
-      <Image className="w-6" src={img} alt="flèche" />
-      <Link className="link-border" href={href} rel="noreferrer">
-        {children}
-      </Link>
-    </div>
+    <Link href={href} rel="noreferrer" className="flex gap-4 items-center">
+      <MoveRight color="white" size={20}></MoveRight>
+      <span className="link-border">{children}</span>
+    </Link>
   );
 }

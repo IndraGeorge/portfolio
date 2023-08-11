@@ -1,19 +1,16 @@
 import Menu from "../components/Menu";
 import Link from "next/link";
-import Image from "next/image";
-import arrow from "../assets/arrowLink.svg";
+import { MoveRight } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="mt-14 md:mx-14 mx-8">
+    <div className="mt-14 md:mx-14 mx-8 h-full">
       <Menu />
       <main>
-        <div className="bloc-anim mt-3 mb-6 md:ml-28">
+        <div className="bloc-anim mt-3 mb-10 md:ml-28">
           <div>
             <h2 className="mb-6">À propos</h2>
             <p className="text-base md:text-lg md:max-w-[75%]">
-              Bienvenue dans mon univers !
-              <br />
               Je suis passionnée par l&apos;art de créer des{" "}
               <b>applications web interactives et intuitives</b> qui repoussent
               les limites de l&apos;expérience utilisateur.
@@ -41,12 +38,15 @@ export default function About() {
               Méthodes agiles
             </p>
             <br />
-
             <Link
-              className="flex gap-3 items-center text-base text-[#a616b9] hover:underline"
+              className="flex gap-3 items-center text-base text-[#d280ff] hover:underline"
               href="/projets"
             >
-              <Image className="animate-bounce w-6" src={arrow} alt="flèche" />
+              <MoveRight
+                className="animate-bounce"
+                color="#d280ff"
+                size={25}
+              ></MoveRight>
               Voir mes projets
             </Link>
           </div>

@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import Menu from "../components/Menu";
+import Button from "../components/Button";
 
 interface UserInput {
   name: string;
@@ -73,10 +74,7 @@ export default function Contact() {
           >
             <div className="-mx-2 mt-8">
               <div className="px-2">
-                <label
-                  className="block mb-2 text-sm text-gray-600"
-                  htmlFor="name"
-                >
+                <label className="block mb-2 text-sm" htmlFor="name">
                   Nom et Prénom
                 </label>
                 <input
@@ -97,10 +95,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="mt-4">
-              <label
-                className="block mb-2 text-sm text-gray-600"
-                htmlFor="email"
-              >
+              <label className="block mb-2 text-sm" htmlFor="email">
                 Email
               </label>
               <input
@@ -119,10 +114,7 @@ export default function Contact() {
             </div>
 
             <div className="w-full mt-4">
-              <label
-                className="block ckmb-2 text-sm text-gray-600"
-                htmlFor="message"
-              >
+              <label className="block ckmb-2 text-sm" htmlFor="message">
                 Message
               </label>
               <textarea
@@ -138,9 +130,7 @@ export default function Contact() {
               </span>
             </div>
             <div className="text-center pt-3">
-              <button className="rounded-full text-white uppercase p-3 w-36 mt-5 duration-200">
-                Envoyer
-              </button>
+              <Button>Envoyer</Button>
               <p
                 className={`mt-3 ${
                   colorSuccess ? "text-green-600" : "text-red-600"

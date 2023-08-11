@@ -1,7 +1,7 @@
-import imgpodologue from "../assets/imgpodologue.jpg";
-import master from "../assets/master.jpg";
-import kasa from "../assets/kasa.jpg";
-import todoapp from "../assets/todoapp.jpg";
+import imgpodologue from "../assets/imgpodologue.png";
+import master from "../assets/master.png";
+import kasa from "../assets/kasa.png";
+import todoapp from "../assets/todoapp.png";
 import Project from "../components/Project";
 import Menu from "../components/Menu";
 
@@ -11,35 +11,43 @@ export default function Projects() {
       <Menu />
       <main>
         <h2 className="text-center">Projets</h2>
-        <div className="bloc-anim bloc-projects flex flex-wrap items-center m-auto mt-8">
-          <ul className="list-projects flex flex-wrap justify-center w-full h-full pl-3 relative">
+        <div className="bloc-anim flex flex-wrap items-center m-auto my-8">
+          <ul className="flex flex-wrap justify-center gap-6 w-full h-full mt-8 relative">
             <Project
               href="https://cabinetpodologievalamba.fr/"
               src={imgpodologue}
               alt="site cabinet podologue valamba"
             >
-              React JS / Material UI
+              <h5 className="name-project">Cabinet podologue</h5>
+              <p className="tech">Découverte du travail d&apos;un podologue.</p>
             </Project>
             <Project
               href="https://challengemaster.fr/"
               src={master}
               alt="site générateur de projest et de défis"
             >
-              React JS / Node JS / Express / API Open AI
+              <h5 className="name-project">Challenge master</h5>
+              <p className="tech">
+                Outil pour générer des idées de projets ou de défis.
+              </p>
             </Project>
             <Project
               href="https://indrageorge.github.io/Kasa/"
               src={kasa}
               alt="site location appartement"
             >
-              React JS
+              <h5 className="name-project">Kasa</h5>
+              <p className="tech">
+                Location d&apos;appatements entre particuliers
+              </p>
             </Project>
             <Project
               href="https://to-do-app-bb6ea.web.app/"
               src={todoapp}
               alt="to do list"
             >
-              React JS
+              <h5 className="name-project">To do app</h5>
+              <p className="tech">To do list</p>
             </Project>
           </ul>
         </div>
