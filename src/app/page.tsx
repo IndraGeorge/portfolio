@@ -13,8 +13,9 @@ export default function Home() {
           <Sparkle className="star2" color="#fff" size={20} />
         </h3>
         <p className="mt-3 text-[20px] md:text-[28px] font-medium">
-          J&apos;aime concevoir des sites solides et flexibles qui offrent une
-          expérience exceptionnelle aux utilisateurs.
+          Je suis une développeuse JavaScript et j&apos;aime concevoir des sites
+          solides et flexibles qui offrent une expérience exceptionnelle aux
+          utilisateurs.
         </p>
         <div className="flex justify-center mt-10 gap-4">
           <Link href={"./a-propos"}>À propos</Link>

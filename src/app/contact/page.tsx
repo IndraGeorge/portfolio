@@ -65,7 +65,7 @@ export default function Contact() {
     <div className="mt-14 md:mx-14 mx-8">
       <Menu />
       <main>
-        <div className="bloc-anim max-w-xl mx-auto mb-5 p-4 rounded-lg pb-0">
+        <div className="contact max-w-xl mx-auto mb-5 p-4 rounded-lg pb-0">
           <form
             onSubmit={handleSubmit(sendEmail)}
             role="form"

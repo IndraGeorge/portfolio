@@ -7,7 +7,7 @@ export default function About() {
     <div className="mt-14 md:mx-14 mx-8 h-full">
       <Menu />
       <main>
-        <div className="bloc-anim mt-3 mb-10 md:ml-28">
+        <div className="about mt-3 mb-10 md:ml-28">
           <div>
             <h2 className="mb-6">À propos</h2>
             <p className="text-base md:text-lg md:max-w-[75%]">
@@ -33,7 +33,7 @@ export default function About() {
             <h4 className="mt-8">Compétences</h4>
             <br />
             <p className="text-base md:text-lg md:max-w-[75%]">
-              React.js / JavaScript / Node.js / Express.js / TypeScript /
+              React JS / JavaScript / Node JS / Express JS / TypeScript /
               MongoDB / Git / GitHub / Responsive design / HTML et CSS /
               Méthodes agiles
             </p>

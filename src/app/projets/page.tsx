@@ -11,7 +11,7 @@ export default function Projects() {
       <Menu />
       <main>
         <h2 className="text-center">Projets</h2>
-        <div className="bloc-anim flex flex-wrap items-center m-auto my-8">
+        <div className="flex flex-wrap items-center m-auto my-8">
           <ul className="flex flex-wrap justify-center gap-6 w-full h-full mt-8 relative">
             <Project
               href="https://cabinetpodologievalamba.fr/"
@@ -38,7 +38,7 @@ export default function Projects() {
             >
               <h5 className="name-project">Kasa</h5>
               <p className="tech">
-                Location d&apos;appatements entre particuliers
+                Location d&apos;appartements entre particuliers
               </p>
             </Project>
             <Project

@@ -1,21 +1,8 @@
-@keyframes anim-translate {
+@keyframes smooth {
   0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes home-anim {
-  0% {
-    transform: translateZ(-100%);
     opacity: 0;
   }
-
   100% {
-    transform: translateZ(0);
     opacity: 1;
   }
 }

@@ -22,10 +22,12 @@ const Menu = () => {
       </div>
       <nav
         className={`menu overflow-hidden fixed top-[0px] left-[0px] flex flex-col justify-center w-full z-[2] transform${
-          nav ? "translate-y-0 h-full" : "translate-y-full h-0"
+          nav
+            ? "translate-y-0 h-full opacity-100"
+            : "translate-y-full h-0 opacity-0"
         }`}
       >
-        <ul className="m-auto md:ml-[25%] overflow-hidden">
+        <ul className="overflow-hidden flex flex-col items-center justify-center md:flex-row">
           <li>
             <Link className="link-border nav-link" href="/" rel="noreferrer">
               Accueil
