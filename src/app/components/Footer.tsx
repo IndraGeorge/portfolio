@@ -7,7 +7,7 @@ export default function Footer() {
   let date = new Date();
 
   return (
-    <div className="flex flex-col items-center justify-center mb-2 absolute bottom-0 left-0 right-0">
+    <footer className="flex flex-col items-center justify-center mb-2">
       <div className="flex gap-4 mb-2">
         <Link
           href="mailto:george.indraa@gmail.com"
@@ -34,6 +34,6 @@ export default function Footer() {
       <p className="text-xs">
         © {date.getFullYear()} Indra George, tous droits réservés
       </p>
-    </div>
+    </footer>
   );
 }

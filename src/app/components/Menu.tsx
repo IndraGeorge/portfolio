@@ -61,7 +61,9 @@ const Menu = () => {
             </Link>
           </li>
         </ul>
-        <Footer />
+        <div className="absolute left-0 right-0 bottom-0">
+          <Footer />
+        </div>
       </nav>
     </header>
   );

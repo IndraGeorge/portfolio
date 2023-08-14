@@ -1,12 +1,12 @@
 import Link from "./components/Link";
 import Button from "./components/Button";
-import Footer from "./components/Footer";
 import { Sparkle } from "lucide-react";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
-      <div className="h-screen px-2.5 flex flex-col justify-center items-center text-center z-10">
+    <main className="overflow-hidden h-screen flex flex-col justify-center items-center">
+      <div className="h-full px-2.5 flex flex-col justify-center items-center text-center z-10">
         <h3 className="relative">
           Hello, Je suis Indra
           <Sparkle className="star" color="#fff" size={20} />
@@ -22,8 +22,8 @@ export default function Home() {
           <Link href={"./projets"}>Projets</Link>
         </div>
         <Button href={"./contact"}>Contacts</Button>
-        <Footer />
       </div>
+      <Footer />
     </main>
   );
 }

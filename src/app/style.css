@@ -38,6 +38,12 @@ i {
   transition: all 0.5s ease-in-out;
 }
 
+@media (prefers-color-scheme: dark) {
+  i {
+    background: #fff;
+  }
+}
+
 .burger.active i:nth-child(1) {
   transform: rotate(135deg);
   position: absolute;
@@ -132,6 +138,7 @@ a {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
+  overflow: hidden;
 }
 
 p {
