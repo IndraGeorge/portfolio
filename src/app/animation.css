@@ -7,7 +7,7 @@
   }
 }
 
-@keyframes bounce {
+@keyframes bounce-arrow {
   0% {
     transform: translateX(-25%);
   }

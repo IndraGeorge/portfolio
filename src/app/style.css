@@ -40,7 +40,7 @@ i {
 
 @media (prefers-color-scheme: dark) {
   i {
-    background: #fff;
+    background: #fff !important;
   }
 }
 
@@ -62,7 +62,7 @@ i {
 }
 
 .animate-bounce {
-  animation: bounce 1s ease-in-out infinite;
+  animation: bounce-arrow 1s ease-in-out infinite;
 }
 
 .blur {
