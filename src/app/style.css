@@ -28,7 +28,7 @@ body {
   overflow: hidden;
 }
 
-i {
+.barre {
   width: 30px;
   height: 3px;
   background: #fff;
@@ -39,23 +39,23 @@ i {
 }
 
 @media (prefers-color-scheme: dark) {
-  i {
+  .barre {
     background: #fff !important;
   }
 }
 
-.burger.active i:nth-child(1) {
+.burger.active .barre:nth-child(1) {
   transform: rotate(135deg);
   position: absolute;
   top: 18px;
 }
 
-.burger.active i:nth-child(2) {
+.burger.active .barre:nth-child(2) {
   transform: translate(-20px);
   opacity: 0;
 }
 
-.burger.active i:nth-child(3) {
+.burger.active .barre:nth-child(3) {
   transform: rotate(-135deg);
   position: absolute;
   top: 18px;

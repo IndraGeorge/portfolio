@@ -16,9 +16,9 @@ const Menu = () => {
         onClick={showNav}
         className={`${nav ? "active fixed" : ""} burger cursor-pointer z-[3]`}
       >
-        <i></i>
-        <i></i>
-        <i></i>
+        <span className="barre"></span>
+        <span className="barre"></span>
+        <span className="barre"></span>
       </div>
       <nav
         className={`menu overflow-hidden fixed top-[0px] left-[0px] flex flex-col justify-center w-full z-[2] transform${

@@ -34,8 +34,8 @@ export default function About() {
             <br />
             <p className="text-base md:text-lg md:max-w-[75%]">
               React JS / JavaScript / Node JS / Express JS / TypeScript /
-              MongoDB / Git / GitHub / Responsive design / HTML et CSS /
-              Méthodes agiles
+              MongoDB / Git / GitHub / Responsive design / HTML / CSS / Méthodes
+              agiles
             </p>
             <br />
             <Link

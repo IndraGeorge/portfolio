@@ -8,12 +8,12 @@ export default function Home() {
     <main className="overflow-hidden h-screen flex flex-col justify-center items-center">
       <div className="h-full px-2.5 flex flex-col justify-center items-center text-center z-10">
         <h3 className="relative">
-          Hello, Je suis Indra
+          Hello, je suis Indra
           <Sparkle className="star" color="#fff" size={20} />
           <Sparkle className="star2" color="#fff" size={20} />
         </h3>
         <p className="mt-3 text-[20px] md:text-[28px] font-medium">
-          Je suis une développeuse JavaScript et j&apos;aime concevoir des sites
+          Je suis développeuse JavaScript et j&apos;aime concevoir des sites
           solides et flexibles qui offrent une expérience exceptionnelle aux
           utilisateurs.
         </p>
