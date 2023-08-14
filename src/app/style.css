@@ -11,7 +11,7 @@
 
 body {
   color: #fff;
-  background: #150942;
+  background: #20154a;
 }
 
 .about {
@@ -66,7 +66,7 @@ i {
   position: absolute;
   top: 0;
   right: 15%;
-  filter: blur(12rem);
+  filter: blur(10rem);
   z-index: -1;
 }
 
@@ -76,7 +76,7 @@ i {
   background: #3848f1;
   position: absolute;
   left: 0;
-  filter: blur(12rem);
+  filter: blur(10rem);
   bottom: 0;
   z-index: -1;
 }
