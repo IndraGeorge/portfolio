@@ -13,7 +13,7 @@ export default function Footer() {
           href="mailto:george.indraa@gmail.com"
           target="_blanck"
           rel="noreferrer"
-          aria-label="Email"
+          aria-label="Adresse email"
         >
           <Mail color="white" size={20}></Mail>
         </Link>
