@@ -13,6 +13,7 @@ export default function Footer() {
           href="mailto:george.indraa@gmail.com"
           target="_blanck"
           rel="noreferrer"
+          aria-label="Email"
         >
           <Mail color="white" size={20}></Mail>
         </Link>
@@ -20,6 +21,7 @@ export default function Footer() {
           href="https://www.linkedin.com/in/indra-george/"
           target="_blanck"
           rel="noreferrer"
+          aria-label="Lien linkedin"
         >
           <Linkedin color="white" size={20}></Linkedin>
         </Link>
@@ -27,6 +29,7 @@ export default function Footer() {
           href="https://github.com/IndraGeorge"
           target="_blanck"
           rel="noreferrer"
+          aria-label="Lien repository GitHub"
         >
           <Github color="white" size={20}></Github>
         </Link>

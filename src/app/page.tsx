@@ -17,7 +17,7 @@ export default function Home() {
           solides et flexibles qui offrent une expérience exceptionnelle aux
           utilisateurs.
         </p>
-        <div className="flex justify-center mt-10 gap-4">
+        <div className="flex justify-center mt-6 gap-4">
           <Link href={"./a-propos"}>À propos</Link>
           <Link href={"./projets"}>Projets</Link>
         </div>

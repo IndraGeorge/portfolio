@@ -5,10 +5,8 @@ type IProps = {
 
 export default function Button({ children, href }: IProps) {
   return (
-    <a href={href}>
-      <button className="rounded-full uppercase p-3 w-36 mt-5">
-        {children}
-      </button>
+    <a className="mt-3" href={href}>
+      <button className="rounded-full uppercase w-36 p-3">{children}</button>
     </a>
   );
 }
