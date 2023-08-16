@@ -7,8 +7,8 @@ export default function Footer() {
   let date = new Date();
 
   return (
-    <footer className="flex flex-col items-center justify-center mb-2">
-      <div className="flex gap-4 mb-2">
+    <footer className="flex flex-col items-center justify-center pb-[6px]">
+      <div className="flex gap-4 pb-[6px]">
         <Link
           href="mailto:george.indraa@gmail.com"
           target="_blanck"

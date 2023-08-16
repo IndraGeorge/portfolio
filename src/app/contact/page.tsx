@@ -129,7 +129,7 @@ export default function Contact() {
                   "Veuillez rentrer un message sans caractère spéciaux"}
               </span>
             </div>
-            <div className="text-center pt-3">
+            <div className="text-center mt-6">
               <Button>Envoyer</Button>
               <p
                 className={`mt-3 ${

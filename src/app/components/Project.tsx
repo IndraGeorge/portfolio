@@ -13,7 +13,7 @@ export default function Project({ href, src, alt, children }: IProps) {
   return (
     <li className="project w-80 p-8 rounded-lg relative">
       <Image
-        priority={false}
+        priority={true}
         className="w-full h-40 object-cover rounded-lg mb-4"
         src={src}
         alt={alt}
