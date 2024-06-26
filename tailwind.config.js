@@ -7,10 +7,8 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      sans: [
-        "Inter var, -apple-system, BlinkMacSystemFont, Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif",
-      ],
+    extend: {
+      
     },
   },
   plugins: [],
