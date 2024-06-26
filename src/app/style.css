@@ -261,6 +261,7 @@ button a:hover{
 .contact form input{
   border-color:transparent;
   border-width: 0;
+  background-color: #fff;
 }
 
 .contact form input:focus{
