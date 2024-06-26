@@ -274,7 +274,7 @@ textarea{
   border-color:transparent;
   border-width: 0;
   border:none;
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 .contact form textarea:focus{
