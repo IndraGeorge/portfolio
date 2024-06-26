@@ -8,7 +8,6 @@ import { useRef } from "react";
 
 const About = () => {
     const [skills, setSkills] = useState(false);
-    console.log(skills)
 
     const showSkills = () => {
         setSkills(true);

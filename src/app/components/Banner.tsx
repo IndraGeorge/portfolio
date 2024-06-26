@@ -21,7 +21,7 @@ const Bannner = () => {
                 className="banner-img h-full w-[100%]"
                 style={{transform: isInView ? "none" : "translateY(100%)",
                      opacity: isInView ? 1 : 0, 
-                     transition: "all 500ms ease-in-out"
+                     transition: "all 600ms ease-in-out"
                     }}
             >
                 <Image src={imageBanner} alt="ordinateur portable" />
