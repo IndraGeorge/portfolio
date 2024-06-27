@@ -75,11 +75,6 @@ header{
   line-height: 44px;
 }
 
-.slogan span{
-  font-weight:500;
-  font-style:italic;
-}
-
 h2,
 h3,
 h4{
@@ -273,6 +268,7 @@ textarea{
   border-color:transparent;
   border-width: 0;
   border:none;
+  field-sizing: content;
 }
 
 .contact form textarea:focus{
