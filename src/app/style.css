@@ -268,7 +268,6 @@ textarea{
   border-color:transparent;
   border-width: 0;
   border:none;
-  field-sizing: content;
 }
 
 .contact form textarea:focus{
