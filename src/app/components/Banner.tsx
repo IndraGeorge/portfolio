@@ -13,7 +13,7 @@ const Bannner = () => {
         <div className="banner text-7xl flex items-center">
             <div className="container-text">
                 <h1 className="mb-4">Indra, développeuse front-end.</h1>
-                <p className="slogan">Votre site qui transforme vos objectifs en résultats <span>concrets</span>.
+                <p className="slogan">Votre site qui transforme vos objectifs en résultats concrets.
                 </p>
                 <button><a href="#contact">Contactez-moi</a></button>
             </div>
@@ -21,7 +21,8 @@ const Bannner = () => {
                 className="banner-img h-full w-[100%]"
                 style={{transform: isInView ? "none" : "translateY(100%)",
                      opacity: isInView ? 1 : 0, 
-                     transition: "all 600ms ease-in-out"
+                     transition: "all 700ms ease-in-out",
+                     animationDelay: "0.5s"
                     }}
             >
                 <Image src={imageBanner} alt="ordinateur portable" />
