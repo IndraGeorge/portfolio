@@ -3,16 +3,16 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import kasa from "../img/kasa.png";
 import capcir from "../img/capcir.png";
-import podologue from "../img/podologue.png";
+import foncsi from "../img/foncsi.png";
 import Project from "./Project";
 
 const Portfolio = () => {
     const refCapcir = useRef(null);
-    const refPodologue = useRef(null);
+    const refFoncsi = useRef(null);
     const refKasa = useRef(null);
 
     const isInViewCapcir = useInView(refCapcir, { once: true });
-    const isInViewPodologue = useInView(refPodologue, { once: true });
+    const isInViewFoncsi = useInView(refFoncsi, { once: true });
     const isInViewKasa = useInView(refKasa, { once: true });
 
     return (
@@ -26,16 +26,16 @@ const Portfolio = () => {
                         animate={isInViewCapcir ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.7, delay: 0.5}}
                     >
-                        <Project href="https://www.capcir.fr" description="Entreprise tech spécialisée dans les logiciels de santé" technology="Php / React js / Scss" img={capcir} />
+                        <Project href="https://www.capcir.fr" description="Capcir, éditeur de logiciel de santé depuis 35 ans" technology="WordPress (PHP / React.js / SCSS)" img={capcir} />
                     </motion.div>
                     <div className="flex flex-col gap-2.5">
                         <motion.div 
-                            ref={refPodologue}
+                            ref={refFoncsi}
                             initial={{ opacity: 0 }}
-                            animate={isInViewPodologue ? { opacity: 1} : { opacity: 0}}
+                            animate={isInViewFoncsi ? { opacity: 1} : { opacity: 0}}
                             transition={{ duration: 0.7, delay: 0.9 }}
                         >
-                            <Project href="https://podologue-7dd17.web.app" description="Cabinet podologue" technology="React js / Material UI" img={podologue} />
+                            <Project href="#" description="Fondation pour une culture de sécurité industrielle" technology="Drupal (PHP / SCSS)" img={foncsi} />
                         </motion.div>
                         <motion.div 
                             ref={refKasa}

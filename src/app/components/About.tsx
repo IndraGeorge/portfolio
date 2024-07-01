@@ -89,7 +89,7 @@ const About = () => {
                             <strong>Outils de Développement :</strong> Compétence avec Git, Webpack, et autres outils essentiels du workflow de développement.<br/>
                         </div>
                     }
-                    <button className="button-cv ml-10">
+                    <button className="button-cv ml-8">
                         <a href="https://www.canva.com/design/DAFsLjQVCiY/5jmeMeXKDOCp3BCetbnedg/view?utm_content=DAFsLjQVCiY&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">
                             Télécharger mon CV
                         </a>
