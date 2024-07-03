@@ -10,7 +10,7 @@ interface UserInput {
 }
 
 export default function Contact() {
-  const key: string | undefined = process.env.NEXT_PUBLIC_KEY;
+  const key: string | undefined = process.env.NEXT_PUBLIC_EMAIL;
 
   const {
     register,
