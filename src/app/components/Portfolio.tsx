@@ -1,7 +1,7 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import kasa from "../img/kasa.png";
+import flash from "../img/flash_biosolutions.png";
 import capcir from "../img/capcir.png";
 import foncsi from "../img/foncsi.png";
 import Project from "./Project";
@@ -26,7 +26,7 @@ const Portfolio = () => {
                         animate={isInViewCapcir ? { opacity: 1 } : { opacity: 0 }}
                         transition={{ duration: 0.7, delay: 0.5}}
                     >
-                        <Project href="https://www.capcir.fr" description="Capcir, éditeur de logiciel de santé depuis 35 ans" technology="WordPress (PHP / React.js / SCSS)" img={capcir} />
+                        <Project href="https://www.capcir.fr" description="Capcir, éditeur de logiciel de santé depuis 35 ans" technology="WordPress (PHP / React.js / SCSS / jQuery)" img={capcir} />
                     </motion.div>
                     <div className="flex flex-col gap-2.5">
                         <motion.div 
@@ -35,7 +35,7 @@ const Portfolio = () => {
                             animate={isInViewFoncsi ? { opacity: 1} : { opacity: 0}}
                             transition={{ duration: 0.7, delay: 0.9 }}
                         >
-                            <Project href="#" description="Fondation pour une culture de sécurité industrielle" technology="Drupal (PHP / SCSS)" img={foncsi} />
+                            <Project href="#" description="Fondation pour une culture de sécurité industrielle" technology="Drupal (PHP / SCSS / jQuery)" img={foncsi} />
                         </motion.div>
                         <motion.div 
                             ref={refKasa}
@@ -43,7 +43,7 @@ const Portfolio = () => {
                             animate={isInViewKasa ? { opacity: 1 } : { opacity: 0}}
                             transition={{ duration: 0.7, delay: 1.2 }}
                         >
-                            <Project href="https://indrageorge.github.io/Kasa" description="Application web de location immobilière" technology="React JS" img={kasa} />
+                            <Project href="https://flashbiosolutions.com/" description="Flash biosolutions" technology="WordPress (PHP / React.js / SCSS / jQuery)" img={flash} />
                         </motion.div>
                     </div>
                 </div>
