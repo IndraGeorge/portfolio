@@ -11,12 +11,12 @@ interface props  {
 
 const Projects = ({description,technology, img, href}:props) => {
     return(
-        <div className="project h-full">
-            <Image src={img} alt="img"/>
+        <div className="project h-full min-h-[200px]">
+            <Image className="min-h-[200px]" src={img} alt="img"/>
             <a href={href} target="_blanck" className="description">
-                <h3 className="text-center pl-4 pr-4">{description}</h3>
-                <p className="mt-2 pl-4 pr-4 text-center">{technology}</p>
-                <Search className="mt-4" size={28} color="#ffffff" />
+            <h3 className="text-center pl-4 pr-4">{description}</h3>
+            <p className="mt-2 pl-4 pr-4 text-center">{technology}</p>
+            <Search className="mt-4" size={28} color="#ffffff" />
             </a>
         </div>
     )
