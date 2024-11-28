@@ -35,7 +35,7 @@ const Portfolio = () => {
                             animate={isInViewFoncsi ? { opacity: 1} : { opacity: 0}}
                             transition={{ duration: 0.7, delay: 0.9 }}
                         >
-                            <Project href="#" description="Fondation pour une culture de sécurité industrielle" technology="Drupal (PHP / SCSS / jQuery)" img={foncsi} />
+                            <Project href="https://www.foncsi.org/" description="Fondation pour une culture de sécurité industrielle" technology="Drupal (PHP / SCSS / jQuery)" img={foncsi} />
                         </motion.div>
                         <motion.div 
                             ref={refKasa}
