@@ -40,7 +40,7 @@ const About = () => {
 
     return (
         <div className="about">
-            <div className="about-container flex min-h-[220px] pb-10">
+            <div className="about-container flex min-h-[220px]">
                 <div className="about-img flex justify-center items-centert">
                     <Image className="max-w-[500px]" src={photo} alt="photo" height={700} />
                 </div>
@@ -51,7 +51,7 @@ const About = () => {
                     </div>
                     {skills == false? 
                         <div 
-                        className="p-8"
+                        className="p-8 mt-4"
                         style={{
                             opacity: isInView ? 1 : 0,
                             transition: "opacity 800ms ease-in-out"
@@ -75,7 +75,7 @@ const About = () => {
                         </div>
                         :
                         <div 
-                        className="p-10"
+                        className="p-10 mt-4"
                         style={{
                             opacity: isInView ? 1 : 0,
                             transition: "opacity 800ms ease-in-out"
@@ -89,11 +89,6 @@ const About = () => {
                             <strong>Outils de Développement :</strong> Compétence avec Git, Webpack, et autres outils essentiels du workflow de développement.<br/>
                         </div>
                     }
-                    <button className="button-cv ml-8">
-                        <a href="https://www.canva.com/design/DAFsLjQVCiY/5jmeMeXKDOCp3BCetbnedg/view?utm_content=DAFsLjQVCiY&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank">
-                            Télécharger mon CV
-                        </a>
-                    </button>
                 </div>
             </div>
         </div>
